@@ -6,4 +6,7 @@
   <section name="TIFF to collection of JPEG" id="cell">
     <tool file="cellorganizer/demo2D00.xml" />
   </section>
+  <section id="loaddata" name="Load Metadata of CellOrganizer">
+    <tool file="load_metadata/load_metadata.xml" />
+  </section>
 </toolbox>
