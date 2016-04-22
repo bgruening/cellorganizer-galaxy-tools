@@ -1,0 +1,6 @@
+#This file lists the locations of metadata for cellorganizer
+#under the "cellorganizer" directory 
+
+
+#<name>	<value>	<file_path>
+Hela_2D_Cell	hela_2d_cell	/Users/yanyu_liang/cellorganizer-galaxy/galaxy/data/Hela_2D_Cell.tar
