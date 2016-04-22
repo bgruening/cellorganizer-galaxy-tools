@@ -1,0 +1,27 @@
+<tool id="load_metadata" name="Load Built-in Data" version="0.0.1">
+  <description>From here you can select and load metadata of CellOrganizer as a dataset collection into your history</description>
+  <command interpreter="bash">load_metadata.sh ${datasets.fields.path} </command>
+  <inputs>
+    <param name="datasets" type="select" label="Select a Dataset">
+      <options from_data_table="load_built_in_indexes">
+        <filter type="sort_by" column="2" />
+          <validator type="no_options" message="No indexes are available" />
+        </options>
+   </param>       
+  </inputs>
+
+  <outputs>
+        <collection type="list" label="$datasets" name="output1">
+            <discover_datasets pattern="(?P&lt;name&gt;.*)" directory="tmp" />
+        </collection>
+  </outputs>
+  
+<help>
+
+
+**Description**
+
+Help you load metadata
+
+</help>
+</tool>
