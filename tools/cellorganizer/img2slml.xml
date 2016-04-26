@@ -1,0 +1,105 @@
+<tool id="img2slml" name="img2slml" version="0.0.1">
+  <description>Trains a generative model from a dataset list of images.</description>
+  <command interpreter="bash">
+    img2slml.sh
+  </command>
+
+  <inputs>
+    <!-- select datasets -->
+    <param name="dataset" type="data" label="Select dataset list"/>
+
+    <section name="main_options" title="Main Options" expanded="True">
+      <param name="dimensionality" type="select" label="dimensionality">
+        <option value="2D" selected="true">2D</option>
+        <option value="3D">3D</option>
+      </param>
+
+      <!-- synthesis option -->
+      <param name="options.synthesis" type="select" label="Synthesis option">
+        <option value="nucleus">nucleus</option>
+        <option value="framework">framework</option>
+        <option value="all" selected="true">all</option>
+      </param>
+    </section>
+
+    <section name="nuclear_model" title="Nuclear model" expanded="False">
+      <param name="options.nucleus.id" type="text" label="options.nucleus.id" />
+      <param name="options.nucleus.name" type="text" label="options.nucleus.id" />
+      <param name="options.nucleus.class" type="select" label="options.nucleus.class">
+        <option value="nuclear_membrane" selected="true">nuclear_membrane</option>
+        <option value="framework">framework</option>
+      </param>
+      <param name="options.nucleus.type" type="select" label="options.nucleus.type">
+        <option value="medial_axis" selected="true">medial_axis</option>
+        <option value="diffeomorphic">diffeomorphic</option>
+        <option value="cylindrical_surface">cylindrical_surface</option>
+      </param>
+    </section>
+
+    <section name="cell_membrane_model" title="Cell membrane model" expanded="False">
+      <param name="options.cell.id" type="text" label="options.cell.id" />
+      <param name="options.cell.name" type="text" label="options.cell.id" />
+      <param name="options.cell.class" type="select" label="options.cell.class">
+        <option value="cell_membrane" selected="true">cell_membrane</option>
+        <option value="framework">framework</option>
+      </param>
+      <param name="options.cell.type" type="select" label="options.cell.type">
+        <option value="ratio" selected="true">ratio</option>
+        <option value="diffeomorphic">diffeomorphic</option>
+      </param>
+    </section>
+
+    <section name="protein_model" title="Protein model" expanded="False">
+      <param name="options.protein.id" type="text" label="options.protein.id" />
+      <param name="options.protein.name" type="text" label="options.protein.id" />
+      <param name="options.cell.class" type="select" label="options.cell.class">
+        <option value="vesicle" selected="true">vesicle</option>
+        <option value="network">network</option>
+      </param>
+      <param name="options.cell.type" type="select" label="options.cell.type">
+        <option value="gmm" selected="true">GMM</option>
+        <option value="microtubule_growth">microtubule_growth</option>
+      </param>
+    </section>
+
+    <section name="other_options" title="Other options" expanded="False">
+      <!-- output options -->
+      <param name="options.tifimages" type="boolean" label="Write TIF image(s)" checked="true" />
+      <param name="options.indexedimage" type="boolean" label="Write indexed image(s)" checked="false" />
+      <param name="options.blenderfile" type="boolean" label="Write Blender file(s)" checked="false" />
+      <param name="options.SBML" type="boolean" label="Write SBML instance(s)" checked="false" />
+
+      <!-- seed for random number generator -->
+      <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+
+      <!-- number of synthesized images -->
+      <param name="number_of_synthesized_images" type="integer" value="1" label="Number of synthesized images"/>
+
+      <!-- image compression -->
+      <param name="compression" type="select" label="Image compression">
+        <option value="lzw" selected="true">LZW</option>
+        <option value="none">No compression</option>
+      </param>
+
+      <param name="options.debug" type="boolean" label="Debug mode" checked="false" />
+      <param name="options.display" type="boolean" label="Display mode" checked="false" />
+      <param name="options.verbose" type="boolean" label="Verbose mode" checked="false" />
+    </section>
+  </inputs>
+  <outputs>
+    <data format="txt" name="output" />
+  </outputs>
+<help>
+
+**Description**
+
+Synthesize image(s) from generative models trained using CellOrganizer.
+
+-----
+
+**Output**
+
+One or more images.
+
+</help>
+</tool>
