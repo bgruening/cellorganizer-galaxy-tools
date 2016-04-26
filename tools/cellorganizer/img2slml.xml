@@ -63,24 +63,6 @@
     </section>
 
     <section name="other_options" title="Other options" expanded="False">
-      <!-- output options -->
-      <param name="options.tifimages" type="boolean" label="Write TIF image(s)" checked="true" />
-      <param name="options.indexedimage" type="boolean" label="Write indexed image(s)" checked="false" />
-      <param name="options.blenderfile" type="boolean" label="Write Blender file(s)" checked="false" />
-      <param name="options.SBML" type="boolean" label="Write SBML instance(s)" checked="false" />
-
-      <!-- seed for random number generator -->
-      <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
-
-      <!-- number of synthesized images -->
-      <param name="number_of_synthesized_images" type="integer" value="1" label="Number of synthesized images"/>
-
-      <!-- image compression -->
-      <param name="compression" type="select" label="Image compression">
-        <option value="lzw" selected="true">LZW</option>
-        <option value="none">No compression</option>
-      </param>
-
       <param name="options.debug" type="boolean" label="Debug mode" checked="false" />
       <param name="options.display" type="boolean" label="Display mode" checked="false" />
       <param name="options.verbose" type="boolean" label="Verbose mode" checked="false" />
