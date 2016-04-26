@@ -2,23 +2,9 @@
 <toolbox>
   <section id="getext" name="Get Data">
     <tool file="data_source/upload.xml" />
-    <tool file="import_murphylab_collections/2D_HeLa.xml" />
-    <tool file="import_murphylab_collections/3D_HeLa.xml" />
-        <tool file="import_murphylab_collections/sample_from_public_synthetic_collection.xml" />
   </section>
 
   <section id="cellorganizer" name="CellOrganizer">
-    <tool file="cellorganizer/img2model.xml" />
-    <tool file="cellorganizer/model2img.xml" />
-  </section>
-
-  <section id="cellorganizer-synthesis" name="Demos">
-    <tool file="cellorganizer/demo2D00.xml" />
-  </section>
-
-  <!-- These are useful tools -->
-  <section id="cellorganizer-tools" name="Useful tools">
-    <tool file="cellorganizer/compare_models.xml" />
-    <tool file="cellorganizer/dataset2shapespace.xml" />
+    <tool file="cellorganizer/img2slml.xml" />
   </section>
 </toolbox>
