@@ -93,13 +93,13 @@
 
 **Description**
 
-Synthesize image(s) from generative models trained using CellOrganizer.
+Trains a generative model.
 
 -----
 
 **Output**
 
-One or more images.
+A valid generative model.
 
 </help>
 </tool>
