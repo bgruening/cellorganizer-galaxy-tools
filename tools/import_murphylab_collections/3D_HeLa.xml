@@ -1,0 +1,41 @@
+<tool id="get3DHeLa" name="get3DHeLa" version="0.0.1">
+  <description>Output a 3D Hela image dataset</description>
+  <command interpreter="bash">
+    get3DHeLa.sh $protein_subset $channel_subset
+  </command>
+
+  <inputs>
+    <!-- select datasets -->
+    <param name="dataset" type="data" label="Select protein subset"/>
+
+    <section name="main_options" title="Main Options" expanded="True">
+      <param name="protein_subset" type="select" label="Select protein subset">
+        <option value="2D" selected="true">2D</option>
+        <option value="3D">3D</option>
+      </param>
+
+      <!-- synthesis option -->
+      <param name="channel_subset" type="select" label="Select channel subset">
+        <option value="nucleus">nucleus</option>
+        <option value="framework">framework</option>
+        <option value="all" selected="true">all</option>
+      </param>
+    </section>
+  </inputs>
+  <outputs>
+    <data format="txt" name="imagedataset" />
+  </outputs>
+<help>
+
+**Description**
+
+Output a 3D Hela image dataset according to the parameters you choose.
+
+-----
+
+**Output**
+
+A valid 3D Hela image dataset.
+
+</help>
+</tool>
