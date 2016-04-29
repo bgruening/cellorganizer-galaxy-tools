@@ -1,0 +1,28 @@
+<tool id="merge_datasets" name="Merge Two Datasets" version="0.0.1">
+  <description>Merge two datasets into one</description>
+  <command interpreter="bash">
+    merge_datasets.sh $dataset1 $dataset2 $output
+  </command>
+
+  <inputs>
+    <!-- select datasets -->
+    <param name="dataset1" type="data" label="Select the dataset you want to merge"/>
+    <param name="dataset2" type="data" label="Select another dataset you want to merge"/>
+  </inputs>
+  <outputs>
+    <data format="txt" name="output" />
+  </outputs>
+<help>
+
+**Description**
+
+Merge two datasets into one.
+
+-----
+
+**Output**
+
+A merged dataset.
+
+</help>
+</tool>
