@@ -1,0 +1,31 @@
+<tool id="compare_models" name="Compare Models" version="0.0.1">
+  <description>Compare Two SLML Objects</description>
+  <command interpreter="bash">
+    compare_models.sh $model1 $model2 $probability_density_overlap $figure
+  </command>
+
+  <inputs>
+    <!-- select datasets -->
+    <param name="model1" type="data" label="Select the SLML object to compare"/>
+    <param name="model2" type="data" label="Select another SLML object to compare"/>
+  </inputs>
+  <outputs>
+    <data format="txt" name="probability_density_overlap" />
+    <data format="txt" name="figure" />
+  </outputs>
+<help>
+
+**Description**
+
+Compare two SLML objects (models).
+
+-----
+
+**Output**
+
+A file describes the probability density overlap of the two models.
+
+A figure about the comparison. 
+
+</help>
+</tool>
