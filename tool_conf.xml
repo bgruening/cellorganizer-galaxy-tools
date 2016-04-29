@@ -4,7 +4,7 @@
     <tool file="data_source/upload.xml" />
     <tool file="import_murphylab_collections/2D_HeLa.xml" />
     <tool file="import_murphylab_collections/3D_HeLa.xml" />
-        <tool file="import_murphylab_collections/sample_from_public_synthetic_collection.xml" />
+    <tool file="import_murphylab_collections/sample_from_public_synthetic_collection.xml" />
   </section>
 
   <section id="cellorganizer" name="CellOrganizer">
@@ -20,5 +20,6 @@
   <section id="cellorganizer-tools" name="Useful tools">
     <tool file="cellorganizer/compare_models.xml" />
     <tool file="cellorganizer/dataset2shapespace.xml" />
+    <tool file="cellorganizer/upload_dataset.xml" />
   </section>
 </toolbox>

@@ -1,0 +1,28 @@
+<tool id="upload_dataset" name="Upload Dataset From A Set of Images" version="0.0.1">
+  <description>Upload a set of images in any format recognoized by BioFormats.</description>
+  <command interpreter="bash">
+    upload_dataset.sh $images $channel $imagedataset
+  </command>
+
+  <inputs>
+    <!-- select datasets -->
+    <param name="images" type="data" label="Select A Set Of Images"/>
+    <param name="channel" type="integer" value="1" label="Fill in the Channel You Want to Use" />
+  </inputs>
+  <outputs>
+    <data format="txt" name="imagedataset" />
+  </outputs>
+<help>
+
+**Description**
+
+Upload the selected channel of the selected set of images.
+
+-----
+
+**Output**
+
+A dataset collection of images.
+
+</help>
+</tool>
