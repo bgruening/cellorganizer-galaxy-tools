@@ -20,56 +20,26 @@
 
 **Description**
 
-Demo2D00 synthesizes one 2D image with nuclear, cell shape, and vesicular channels from all vesicular object models (nucleoli, lysosomes, endosomes, and mitochondria) without convolution. 
-This model was trained from the Murphy Lab 2D HeLa dataset, which is included in
-CellOrganizer.
+demo2D00 synthesizes one 2D image with nuclear, cell shape, and vesicular channels from all vesicular object models (nucleoli, lysosomes, endosomes, and mitochondria) without convolution. This model was trained from the Murphy Lab 2D HeLa dataset, which is included in CellOrganizer.
 
 -----
 
-**Input**
+**Inputs**
 
-User parameter options are as follows:
-<list type="bullet">
-<item>
-<description>the seed for the pseudo-random number generator, and</description>
-</item>
-<item>
-<description>the image compression algorithm (LZW or None)</description>
-</item>
-</list>
+- Seed for the pseudo-random number generator
+- Image compression algorithm
 
 -----
 
 **Output**
-<list type="bullet">
-<item>
-<description>One image as a TIFF (.tif) file.</description>
-</item>
-</list>
+
+- One image as a TIFF (.tif) file.
 
 -----
 
 **Example**
 
-Running Demo2D00 with the following parameters,
-<list type="bullet">
-<item>
-<term>Seed for pseudo-random number generator</term>
-<description>3</description>
-</item>
-<term>Image compression</term>
-<item>
-<description>LZW</description>
-</item>
-</list>
-
-will result in the following image:
-<image>
-   <src>the url to the image</src>
-   <height> image height in pixels</height>
-   <width> image width in pixels</width>
-   <title> whatever title you want for the image</title>
-</image>
+- This following image is generated using the default parameters:
 
 
 </help>
