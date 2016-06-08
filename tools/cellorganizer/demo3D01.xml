@@ -20,16 +20,29 @@
 
 **Description**
 
-Synthesizes one 3D image with nuclear, cell shape, and vesicular channels
+demo3D01 synthesizes one 3D image with nuclear, cell shape, and vesicular channels
 from all vesicular object models (lysosomes, mitochondria, nucleoli, and
 endosomes) with sampling method set to render vesicular objects as
-ellipsoids without convolution. The model was trained from the Murphy Lab
-3D HeLa dataset.
+ellipsoids without convolution. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Seed for the pseudo-random number generator
+- Image compression algorithm
+
+-----
 
 **Output**
 
-- a zip file with six TIFF files (nuclear, cell shape, lysosomal, mitochondrial,
-  nucleolar, and endosomal channels)
+- A zip file with six TIFF (.tif) files for the nuclear, cell shape, lysosomal, mitochondrial, nucleolar, and endosomal channels
+
+-----
+
+**Example**
+
+- The following images are generated using the default parameters:
 
 </help>
 </tool>
