@@ -1,7 +1,7 @@
 <tool id="demo3D14" name="demo3D14" version="0.0.1">
   <description>Runs demo3D14 from CellOrganizer.</description>
   <command interpreter="bash">
-    demo3D13.sh $compression
+    demo3D14.sh $compression
   </command>
   <inputs>
     <!-- image compression -->
