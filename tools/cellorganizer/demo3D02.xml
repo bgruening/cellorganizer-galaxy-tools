@@ -1,0 +1,54 @@
+<tool id="demo3D02" name="demo3D02" version="0.0.1">
+  <description>Runs demo3D02 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D02.sh $input $seed $alphaval $viewangles1 $viewangles2
+  </command>
+  <inputs>
+    <param format="tif" name="input" type="data" label="demo3D00 TIFF files"></param>
+
+    <!-- seed for random number generator -->
+    <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+
+    <!-- alpha value-->
+    <param name="alphaval" type="float64" value="0.1" label="Alpha Value"/>    
+
+    <!-- viewangles1 -->
+    <param name="viewangles1" type="integer" value="20" label="View angle 1"/>   
+
+    <!-- viewangles2 -->
+    <param name="viewangles2" type="integer" value="-30" label="View angle 2"/>
+  </inputs>
+  <outputs>
+    <data format="png" name="output" from_work_dir="output.png"/>
+  </outputs>
+<help>
+
+**Description**
+
+demo3D02 generates surface plot of image synthesized by demo3D00 This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Three TIFF (.tif) files from demo3D00
+- Seed for the pseudo-random number generator
+- Alpha value
+- View angle 1
+- View angle 2
+
+-----
+
+**Output**
+
+- A PNG (.png) file
+
+-----
+
+**Example**
+
+- The following image is generated using the default parameters:
+
+
+</help>
+</tool>
