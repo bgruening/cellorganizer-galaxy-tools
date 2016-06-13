@@ -1,0 +1,43 @@
+<tool id="demo3D05" name="demo3D05" version="0.0.1">
+  <description>Runs demo3D05 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D05.sh $seed $compression
+  </command>
+  <inputs>
+    <!-- seed for random number generator -->
+    <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+
+    <!-- image compression -->
+    <param name="compression" type="select" label="Image compression">
+      <option value="lzw" selected="true">LZW</option>
+      <option value="none">No compression</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="zip" name="output" from_work_dir="output.zip"/>
+  </outputs>
+<help>
+
+
+**Description**
+
+demo3D05 synthesizes one 3D image with nuclear, cell shape, and protein channels from all object models (nucleoli, lysosomes, endosomes, mitochondria, and microtubules) with sampling method set to sample vesicular objects from Gaussians; without convolution. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Seed for the pseudo-random number generator
+- Image compression algorithm
+
+-----
+
+**Output**
+
+- A zip file with seven TIFF (.tif) files for the nuclear, cell shape, lysosomal,  nucleolar, endosomal, mitochondrial, and microtubule channels
+
+-----
+
+**Example**
+
+- The following images are generated using the default parameters:
