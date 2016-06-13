@@ -1,0 +1,56 @@
+<tool id="demo3D28" name="demo3D28" version="0.0.1">
+  <description>Runs demo3D28 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D28.sh $seed $compression $resolution1 $resolution2 $resolution3 
+  </command>
+  <inputs>
+    <!-- seed for random number generator -->
+    <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+    <!-- image compression -->
+    <param name="compression" type="select" label="Image compression">
+      <option value="lzw" selected="true">LZW</option>
+      <option value="none">No compression</option>
+    </param>
+    <!-- resolution x value-->
+    <param name="resolution1" type="float64" value="0.49" label="Resolution X Value"/>
+
+    <!-- resolution y value-->
+    <param name="resolution2" type="float64" value="0.49" label="Resolution Y Value"/>
+    </param>
+
+    <!-- resolution z value-->
+    <param name="resolution3" type="float64" value="0.2000" label="Resolution Z Value"/>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="zip" name="output" from_work_dir="output.zip"/>
+  </outputs>
+<help>
+
+
+**Description**
+
+demo3D28 synthesizes one 3D image with nuclear, cell shape, and nucleolar channels from nucleolar model with sampling method set to render nucleoli as ellipsoids without convolution. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Seed for the pseudo-random number generator
+- Image compression algorithm
+- Three values for the image resolution
+
+-----
+
+**Output**
+
+- A zip file with three TIFF (.tif) files for the nuclear, cell shape, and nucleolar channels
+
+-----
+
+**Example**
+
+- The following images are generated using the default parameters:
+
+</help>
+</tool>
