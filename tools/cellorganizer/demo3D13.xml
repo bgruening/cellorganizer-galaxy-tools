@@ -1,0 +1,39 @@
+<tool id="demo3D13" name="demo3D13" version="0.0.1">
+  <description>Runs demo3D13 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D13.sh $downsample_factor
+  </command>
+  <inputs>
+  <!-- downsample factor -->
+    <param name="downsample_factor" type="integer" value="5" label="Downsample factor"/>
+  </inputs>
+  <outputs>
+    <data format="zip" name="output" from_work_dir="output.zip"/>
+  </outputs>
+<help>
+
+
+**Description**
+
+demo3D13 exports images synthesized by demo3D01 as object files importable to Blender.This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Downsample factor
+
+-----
+
+**Output**
+
+- A zip file with six Wavefront (.obj) files for the nuclear, cell shape, lysosomal,  nucleolar, endosomal, and mitochondrial channels
+
+-----
+
+**Example**
+
+- The following images are generated using the default parameters:
+
+</help>
+</tool>
