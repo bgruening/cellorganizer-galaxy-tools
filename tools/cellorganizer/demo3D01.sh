@@ -12,10 +12,11 @@ NUMBER_OF_IMAGES=1
 COMPRESSION=$2
 
 echo "
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DO NOT MODIFY THIS BLOCK
-addpath( genpath([pwd filesep 'cellorganizer']));
+cd ./cellorganizer
+setup(true);
+cd('$WORKING_DIRECTORY')
 
 options.seed = $SEED;
 try

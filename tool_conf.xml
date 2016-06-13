@@ -2,7 +2,6 @@
 <toolbox>
   <section id="get_data" name="Get Data">
     <tool file="data_source/upload.xml" />
-    <tool file="cellorganizer/sample_from_public_database.xml" />
   </section>
 
   <!-- tools to be used in MMBioS 2016 simple pipeline -->
@@ -32,6 +31,7 @@
       <tool file="cellorganizer/compare_vesicular_models.xml" />
       <tool file="cellorganizer/export_to_blender.xml" />
       <tool file="cellorganizer/export_to_vcell.xml" />
+      <tool file="cellorganizer/show_3D_surface_plot.xml" />
     </section>
 
     <section id="demos" name="Demos">

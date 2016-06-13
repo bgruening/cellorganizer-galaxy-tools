@@ -19,17 +19,17 @@ setup(true);
 cd('$WORKING_DIRECTORY');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-file = 'output.tif';
-disp( ['Loading image ' file])
-img = tif2img( file );
-img2 = reshape( img, size(img, 1 ), [] );
-img2 = uint8(img2);
-imwrite( img2, ['output.png'] );
+img = tif2img( 'output.tif' );
+
+for i=1:1:size(img,3)
+   temp = img(:,:,i);
+   temp( find(temp~=0) ) = i;
+   img(:,:,i) = temp;
+end
+
+img2tif(img,'output.tif')
 
 exit;" > script.m
-
-echo "Running the following script in Matlab"
-cat script.m
 
 echo $WORKING_DIRECTORY
 ln -s $CELLORGANIZER $(pwd)/cellorganizer

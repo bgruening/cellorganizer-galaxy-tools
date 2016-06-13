@@ -8,23 +8,22 @@ WORKING_DIRECTORY=`pwd`
 MATLAB=/opt/packages/matlab/R2016a/bin/matlab
 
 INPUT=$1
-
-ln -s $INPUT $(pwd)/output.tif
+cp -v $INPUT $(pwd)/model.mat
 
 echo "
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DO NOT MODIFY THIS BLOCK
 cd ./cellorganizer
 setup(true);
-cd('$WORKING_DIRECTORY');
+cd('$WORKING_DIRECTORY')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-file = 'output.tif';
-disp( ['Loading image ' file])
-img = tif2img( file );
-img2 = reshape( img, size(img, 1 ), [] );
-img2 = uint8(img2);
-imwrite( img2, ['output.png'] );
+% specify model name and load model
+files = {'./model.mat'};
+options.synthesis = 'framework';
+
+slml2img( files, options );
+!mv -v demo1.tif output.tif
 
 exit;" > script.m
 

@@ -1,0 +1,46 @@
+<tool id="demo2D02" name="demo2D02" version="0.0.1">
+  <description>Runs demo2D02 from CellOrganizer</description>
+  <command interpreter="bash">
+    demo2D02.sh $seed $compression
+  </command>
+  <inputs>
+    <!-- seed for random number generator -->
+    <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+
+    <!-- image compression -->
+    <param name="compression" type="select" label="Image compression">
+      <option value="lzw" selected="true">LZW</option>
+      <option value="none">No compression</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="tif" name="output" from_work_dir="output.tif"/>
+  </outputs>
+<help>
+
+**Description**
+
+demo2D02 synthesizes one 2D image with nuclear, cell shape, and lysosomal channels from the LAMP2 model trained in demo2D01; without convolution. This model was trained from the Murphy Lab 2D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Seed for the pseudo-random number generator
+- Image compression algorithm
+
+-----
+
+**Output**
+
+- A TIFF (.tif) file containing the nuclear, cell shape, and lysosomal channels
+
+-----
+
+**Example**
+
+- The following image is generated using the default parameters:
+
+
+</help>
+</tool>

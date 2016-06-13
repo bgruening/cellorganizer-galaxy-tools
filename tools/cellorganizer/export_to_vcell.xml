@@ -7,7 +7,7 @@
 <param format="tif" name="input" type="data" label="2D images"></param>
   </inputs>
   <outputs>
-    <data format="png" name="output" from_work_dir="output.png"/>
+    <data format="tif" name="output" from_work_dir="output.tif"/>
   </outputs>
 <help>
 

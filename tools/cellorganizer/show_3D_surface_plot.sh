@@ -8,10 +8,11 @@ WORKING_DIRECTORY=`pwd`
 MATLAB=/opt/packages/matlab/R2016a/bin/matlab
 
 INPUT=$1
-NUMBER_OF_IMAGES=1
-COMPRESSION=$2
+VIEWANGLEX=$2
+VIEWANGLEY=$3
+ALPHAVAL=$4
 
-ln -s $INPUT $(pwd)/output.zip
+cp -v $INPUT $(pwd)/output.zip
 unzip ./output.zip
 rm -fv output.zip
 find . -type f -name "*.tif" -exec mv -v {} . \;
@@ -24,27 +25,16 @@ setup(true);
 cd('$WORKING_DIRECTORY');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-imgs = {};
-files = dir( [ pwd filesep '*.tif'] );
-for index=1:1:length(files)
-  file = files(index).name;
-  disp( ['Loading image ' file]);
-  img = tif2img( file );
-  temp = reshape( img, size(img, 1 ), [] );
-  temp = uint8(temp);
-  size( temp )
-  imgs{index} = temp;
-end
+colors = {'blue', 'green' 'red'};
+viewangles = [$VIEWANGLEX,$VIEWANGLEY];
 
-if ~isempty(imgs)
-    img = imgs{1};
-end
+%transparency
+alphaval = $ALPHAVAL;
 
-for index=2:1:length(imgs)
-    img = [ img; imgs{index} ];
-end
-
-imwrite( img, 'output.png' );
+% show shape space by calling the function
+f = figure('visible','off');
+syn2surfaceplot( pwd, colors, viewangles, alphaval );
+saveas( f, 'output.png', 'png' );
 
 exit;" > script.m
 
