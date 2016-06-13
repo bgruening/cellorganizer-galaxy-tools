@@ -1,0 +1,42 @@
+<tool id="demo3D14" name="demo3D14" version="0.0.1">
+  <description>Runs demo3D14 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D13.sh $compression
+  </command>
+  <inputs>
+    <!-- image compression -->
+    <param name="compression" type="select" label="Image compression">
+      <option value="lzw" selected="true">LZW</option>
+      <option value="none">No compression</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="zip" name="output" from_work_dir="output.zip"/>
+  </outputs>
+<help>
+
+
+**Description**
+
+demo3D14 renders 2D mean projections along XY, XZ, and YZ axes of images synthesized by demo3D01. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Image compression algorithm
+
+-----
+
+**Output**
+
+- A zip file with six TIFF (.tif) files for the nuclear, cell shape, lysosomal,  nucleolar, endosomal, and mitochondrial channels
+
+-----
+
+**Example**
+
+- The following projections are generated using the default parameters:
+
+</help>
+</tool>
