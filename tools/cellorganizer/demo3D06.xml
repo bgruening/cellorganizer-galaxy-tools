@@ -1,7 +1,7 @@
-<tool id="demo3D05" name="demo3D05" version="0.0.1">
-  <description>Runs demo3D05 from CellOrganizer.</description>
+<tool id="demo3D06" name="demo3D06" version="0.0.1">
+  <description>Runs demo3D06 from CellOrganizer.</description>
   <command interpreter="bash">
-    demo3D05.sh $seed $compression
+    demo3D06.sh $seed $compression
   </command>
   <inputs>
     <!-- seed for random number generator -->
@@ -21,7 +21,7 @@
 
 **Description**
 
-demo3D05 synthesizes one 3D image with nuclear, cell shape, and protein channels from all object models (nucleoli, lysosomes, endosomes, mitochondria, and microtubules) with sampling method set to sample vesicular objects from Gaussians; without convolution. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+demo3D06 synthesizes one 3D image with nuclear, cell shape, and protein channels from all object models (nucleoli, lysosomes, endosomes, mitochondria, and microtubules) with sampling method set to render vesicular objects as ellipsoids and convolution with point-spread function. This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
 
 -----
 
