@@ -1,0 +1,39 @@
+<tool id="demo3D22" name="demo3D22" version="0.0.1">
+  <description>Runs demo3D22 from CellOrganizer.</description>
+  <command interpreter="bash">
+    demo3D22.sh $seed
+  </command>
+  <inputs>
+    <!-- seed for random number generator -->
+    <param name="seed" type="integer" value="3" label="Seed for pseudo-random number generator"/>
+  </inputs>
+  <outputs>
+    <data format="png" name="image" from_work_dir="image.png"/>
+  </outputs>
+<help>
+
+
+**Description**
+
+demo3D22 synthesizes a protein pattern instance from the synthetic image produced in demo3DDiffeoSynth.This model was trained from the Murphy Lab 3D HeLa dataset, which is included in CellOrganizer.
+
+-----
+
+**Inputs**
+
+- Seed for the pseudo-random number generator
+
+-----
+
+**Output**
+
+- A PNG (.png) file
+
+-----
+
+**Example**
+
+- The following image is generated using the default parameters:
+
+</help>
+</tool>
